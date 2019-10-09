@@ -26,10 +26,12 @@
        				$("#menu").addClass('fixed');
     				//$("#logo").css("margin-bottom", "80px");
     				$("#logo_small").show();
+					$("#call_me").show();
    					} else {
       					$("#menu").removeClass("fixed");
     				//$("#logo").css("margin-bottom", "0px");
     				$("#logo_small").hide();
+					$("#call_me").hide();
    						} 
 				});
 
@@ -71,6 +73,21 @@
 			<div class="undermenu" href="#" name="photos">Zdjęcia</div>
 			<div class="undermenu" href="#" name="contact">Kontakt</div>
 			<div class="undermenu" href="#" name="partners">Współpraca</div>
+				<div id="call_me">
+					<span>
+					<script>
+					var a = new Date();
+					if(a.getDay() != 6 && a.getDay() != 0 && a.getHours() > 8 && a.getHours() < 18) 
+					{
+						document.write("Gabinet jest otwarty, zadzwoń: +48 725 656 143")
+					}
+					else
+					{
+						document.write("Zamknięte.")
+					}
+					</script>
+					</span>
+				</div>
 		</div>
 </header>
 
@@ -210,7 +227,7 @@
 
 	</div>
 	<div id="copys">
-		Wszelkie prawa zastrzeżone<br>Aneta Słotwińska (this year)
+		Wszelkie prawa zastrzeżone ;copy<br>Aneta Słotwińska <script> var theDate=new Date(); document.write(theDate.getFullYear()) </script>
 	</div>
 
 </footer>

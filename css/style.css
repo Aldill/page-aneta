@@ -3,6 +3,7 @@
 /*
 #fff5f5 - base pink
 #eaa59d - pink in logo
+#ffe0e0 - just little pink
 */
 
 body{
@@ -16,7 +17,6 @@ body{
 
 #content{
 	padding-bottom:400px;
-
 }
 
 
@@ -24,13 +24,13 @@ body{
 
 section{
 	width:100%;
-	height:100%;
 	background-color: white;
 	color:black;
 	text-align: center;
 	padding: 15px 0px;
 }
-/*section .title::before{
+/* line of the bottom of section
+section .title::before{
 	content:"";
 	width:100%;
 	height:1px;
@@ -42,9 +42,11 @@ section .title{
 	letter-spacing: 2px;
 	font-size:40px;
 	color:white;
+	padding-top: 30px;
+	padding-bottom: 20px;
 }
 
-.title span{
+section .title span{
 	background-color:#eaa59d;
 	border-radius: 25px;
 	padding:3px 15px;
@@ -53,7 +55,6 @@ section .text{
 	margin:10px;
 	font-size:16px;
 	letter-spacing: .5px;
-
 }
 
 section  > div{
@@ -94,16 +95,6 @@ header{
 	z-index: 3;
 }
 
-#menu.fixed{
-	position: fixed;
-    width:100%;
-    border-top: none;
-    background-color: white;
-    top: 0;
-    left: 0;
-    margin-top: 0px;
-    border-bottom: 1px solid #dddddd;
-}
 .undermenu{
 	transition: background-color .5s ;
 	padding:0px 10px;
@@ -121,7 +112,7 @@ header{
 	display: inline-block;
 }
 .undermenu:hover, .undermenu.active{
-	background-color: #fdf1f0;
+	background-color: #ffe0e0;
 }
 .show_menu{
 	display:none;
@@ -130,7 +121,16 @@ header{
 
 /* fixed menu */
 
-
+#menu.fixed{
+	position: fixed;
+    width:100%;
+    border-top: none;
+    background-color: white;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    border-bottom: 1px solid #dddddd;
+}
 #logo_small{
 	width:120px;
 	height:80px;
@@ -149,7 +149,19 @@ header{
 	margin:auto;
 	width: 100%;
 }
-
+#call_me
+{
+	height: 80px;
+	line-height: 80px;
+	float:right;
+	margin-right:10px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	display:none;
+	
+}
 
 /* offer view */
 
