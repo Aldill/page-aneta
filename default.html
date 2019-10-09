@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Aneta Słotwińska - fizjoterapia i masaż</title>
+<meta description="Fizjoterapia Tomaszów Lubelski, profesjonalna i miła obsługa. Gwarantowana skuteczność zabiegów, polecany salon w całym mieście i nie tylko.">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/js.js"></script>
+<script>
+	
+	$(document).ready(function(){
+    		// setting dynamic href
+    		$('div[href^="#"]').on('click', function(e){
+    			e.preventDefault();
+    			var position = $('.'+($(this).attr("name"))).offset().top;
+    			$('html, body').animate({scrollTop: (position-65)+ 'px'}, 200);
+    		});
+    		var menu_top_position = $("#menu").offset().top; // getting top position before function
+    		$(window).on('resize', function(){
+    			menu_top_position = $("#menu").offset().top; // when resize, update distance
+    		})
+				$(window).scroll(function(event){
+   					if (($(window).scrollTop() >= menu_top_position)){
+       				$("#menu").addClass('fixed');
+    				//$("#logo").css("margin-bottom", "80px");
+    				$("#logo_small").show();
+   					} else {
+      					$("#menu").removeClass("fixed");
+    				//$("#logo").css("margin-bottom", "0px");
+    				$("#logo_small").hide();
+   						} 
+				});
+
+
+
+    		
+
+    	// showing menu
+    	$(".show_menu").on('click', function(){
+    		$(".undermenu").slideToggle();
+    	})
+    	//dynamic content offer
+    	$("#image_containter").on("click", function(){
+    		$("#box_for_offer").load('offers/'+$(this).attr("name")+'.html').slideDown("slow");
+    	})
+    	$("#box_for_offer .close").on("click", function(){
+    		$("#box_for_offer").html('');
+    		$("#box_for_offer").slideUp("slow");
+
+    	})
+
+    });
+</script>
+</head>
+<body>
+	<div id="content">
+	<header class="main">
+		<div id="logo">
+			<img src="images/logo.png">
+		</div>
+		<div id="menu">
+				<div id="logo_small">
+					<img src="images/logo_small.png">
+				</div>
+			<div class="show_menu">•♦♣♠♦</div>
+			<div class="undermenu" href="#" name="main">Główna</div>
+			<div class="undermenu" href="#" name="aboutme">O mnie</div>
+			<div class="undermenu" href="#" name="offer">Oferta</div>
+			<div class="undermenu" href="#" name="photos">Zdjęcia</div>
+			<div class="undermenu" href="#" name="contact">Kontakt</div>
+			<div class="undermenu" href="#" name="partners">Współpraca</div>
+		</div>
+</header>
+
+	<section id="aboutme" class="aboutme">
+		
+			<div class="title">
+			<span> O mnie </span> 
+			</div>
+			<div class="text">Nazywam się <b>ANETA SŁOTWIŃSKA</b>, coś tam coś tam. Ukończyłam szkołę tam i tam, posiadam wyszkolenie z tego i tego. Dodatkowo odbyłam kursy takie i takie. Coś tam dalej o sobie i dalej.</div>
+
+		
+	</section>
+	<section class="offer">
+			<div class="title">
+			<span> Oferta </span>
+			</div>
+			<div class="one_box">
+				<span title="">Magnetoterapia</span>
+				<div class="one_box_text"></div>
+			</div>
+			<div class="one_box">
+				<span title="">Magnetoterapia</span>
+				<div class="one_box_text"></div>
+			</div>
+			<div class="one_box">
+				<span title="">Magnetoterapia</span>
+				<div class="one_box_text"></div>
+			</div>
+			<div class="one_box">
+				<span title="">Magnetoterapia</span>
+				<div class="one_box_text"></div>
+			</div>
+			<div class="one_box">
+				<span title="">Magnetoterapia</span>
+				<div class="one_box_text"></div>
+			</div>
+			<div class="one_box">
+				<span title="">Magnetoterapia</span>
+				<div class="one_box_text"></div>
+			</div>
+			<div class="text"></div>
+			<div id="image_containter" name="magnetoterapia">
+							<div class="image_title">Magnetoterapia</div>
+							<img src="images/magnetoterapia.jpg"></div>
+			<div id="image_containter">
+							<div class="image_title">Drenaż limfatyczny</div>
+							<img src="images/drenazlimfatyczny.jpg"></div>
+			<div id="image_containter">
+							<div class="image_title">Krioterapia</div>
+							<img src="images/krioterapia.jpg"></div>
+			<div id="image_containter">
+							<div class="image_title">Elektroterapia</div>
+							<img src="images/elektroterapia.jpg"></div>
+			<div id="image_containter">
+							<div class="image_title">Laseroterapia</div>
+							<img src="images/laseroterapia.jpg"></div>
+			<div id="image_containter">
+							<div class="image_title">Sonoterapia</div>
+							<img src="images/sonoterapia.jpg"></div>
+			<div id="box_for_offer">
+
+			</div>
+
+	</section>
+	<section class="photos">
+		<div class="title"> 
+			<span>Zdjęcia </span>
+		</div>
+		<div class="images_slider">
+			<div class="image_back"></div>
+			<div class="images_slider_box">
+				<img class="active" src="images/magnetoterapia.jpg">
+				<img src="images/drenazlimfatyczny.jpg">
+				<img src="images/krioterapia.jpg">
+				<img src="images/elektroterapia.jpg">
+				<img src="images/laseroterapia.jpg">
+				<img src="images/sonoterapia.jpg">
+			</div>
+			<div class="image_next"></div>
+		</div>
+
+	</section>
+
+	<section class="contact">
+		<div class="title"> 
+			<span>Kontakt</span>
+		</div>
+		<div id="contact_box">
+			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FAneta-S%25C5%2582otwi%25C5%2584ska-Fizjoterapia-i-Masa%25C5%25BC-148720952428075%2Fabout%2F%3Fref%3Dpage_internal&tabs=timeline&width=500&height=450&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="500" height="450" style="overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+		</div>
+		<div class="contact_separator"></div>
+		<div id="contact_box">
+			Zadzwoń<br>
+			+48 725 656 143<br><br>
+			Otwarte od poniedziałku do piątku<br>
+			8:00 - 18:00<br>
+		</div>
+		<div class="contact_separator"></div>
+		<div id="contact_box">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4094064433857!2d23.419202015911424!3d50.45210049512658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4724af14150c7541%3A0x75e8df85b293f5ca!2sKo%C5%9Bcielna+16%2C+22-600+Tomasz%C3%B3w+Lubelski!5e0!3m2!1spl!2spl!4v1548482874933" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</section>
+	<section class="partners">
+		<div class="title">
+			<span>Współpraca</span>
+		</div>
+		<div class="text">Strona jak i cały salon powstał w współpracy z wieloma firmami oraz coś tam unia europejska czy coś. Albo to leci do głównego diva i jest na starcie strony.</div>
+		<div id="logo_containter">
+			<div id="logo_image"><img src="images/Logo_UE.jpg"></div>
+			<div id="logo_image"><img src="images/Logo_Leader.png"></div>
+			<div id="logo_image"><img src="images/logo_roztocze.jpg"></div>
+			<div id="logo_image"><img src="images/Logo_PROW.jpg"></div>
+		</div>
+	</section>
+</div>
+<footer>
+	<div class="divide_footer">
+		<h1>"Dobre nawyki jak i złe nawyki są jak psy. Wygrywa ten, którego częściej karmisz."</h1>
+		<h3>znalazłem w internecie</h3>
+	</div>
+	<div class="divide_footer">
+		<h1>Kontakt</h1>
+		<h3>Tomaszów Lubelski 22-600</h3>
+		<h3> ul.Kościelna 16</h3>
+		<h3> anetasłotwińska@asdasd.pl
+	</div>
+	<div class="divide_footer">
+		<h1> Strona </h1>
+		<h3> odnośnik</h3>
+		<h3> odnośnik</h3>
+		<h3> odnośnik</h3>
+		<h3> odnośnik</h3>
+		<h3> odnośnik</h3>
+		<h3> odnośnik</h3>
+		<h3> odnośnik</h3>
+
+
+	</div>
+	<div id="copys">
+		Wszelkie prawa zastrzeżone<br>Aneta Słotwińska (this year)
+	</div>
+
+</footer>
+</body>
+
+</html>
