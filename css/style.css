@@ -32,14 +32,6 @@ body {
   font-size: 16px;
   z-index: 3;
 }
-/*.menu-header::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  bottom: 0;
-  background-color: #eaa59d;
-}*/
 .menu-header__logo {
   height: 70px;
   margin: 0px 20px;
@@ -120,23 +112,36 @@ body {
   justify-content: center;
   align-items: center;
 }
-/* photos */
+
+/* photos view */
+
+.photos__slider {
+	margin-top: 50px;
+	
+	height: 400px;
+  }
+  .photos__img {
+	  height:100%;
+	  width:100%;
+	  
+  }
+  
 
 @keyframes photos-slideshow {
   0% {
-    background-image: url("../images/magnetoterapia.jpg");
+    background: url("../images/magnetoterapia.jpg") no-repeat;
   }
   25% {
-    background-image: url("../images/drenazlimfatyczny.jpg");
+    background: url("../images/drenazlimfatyczny.jpg") no-repeat;
   }
   50% {
-    background-image: url("../images/krioterapia.jpg");
+    background: url("../images/krioterapia.jpg") no-repeat;
   }
   75% {
-    background-image: url("../images/laseroterapia.jpg");
+    background: url("../images/laseroterapia.jpg") no-repeat;
   }
   100% {
-    background-image: url("../images/elektroterapia.jpg");
+    background: url("../images/elektroterapia.jpg") no-repeat;
   }
 }
 
@@ -144,7 +149,7 @@ body {
 
 .offer {
   text-align: center;
-  padding-bottom:35px; /*cause of offer__box */
+  padding-bottom: 35px; /*cause of offer__box */
 }
 .offer__box {
   display: inline-block;
@@ -173,16 +178,16 @@ body {
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
-padding:6px 0px;
+  padding: 6px 0px;
   letter-spacing: 1px;
   text-transform: lowercase;
-  background-color:#ffe0e0;
+  background-color: #ffe0e0;
 }
 
 .offer__img {
   height: inherit;
   width: inherit;
-  border: 10px solid #ffe0e0;
+  border: 5px solid #ffe0e0;
   position: absolute;
   left: 0;
   right: 0;
@@ -191,49 +196,6 @@ padding:6px 0px;
   border-radius: 50%;
   margin: auto;
 }
-/* photos view */
-
-.images_slider {
-  display: block;
-  margin-top: 50px;
-  display: inline-block;
-}
-.image_back {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  float: left;
-}
-.image_next {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  float: right;
-}
-.images_slider_box {
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px;
-  height: 600px;
-  position: relative;
-  overflow: hidden;
-  display: block;
-  animation: photos-slideshow 5s infinite;
-  background-image: url("../images/photo.jpg");
-}
-.images_slider_box img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  margin: auto;
-  height: 100%;
-  z-index: -1;
-}
-
 /* contact view */
 
 #contact_box {

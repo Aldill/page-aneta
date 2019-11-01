@@ -10,8 +10,23 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/js.js"></script>
+	<script src="js/siema.min.js"></script>
 	<script>
+
+
 		$(document).ready(function () {
+
+			new Siema({
+				selector: '.photos__slider',
+				perPage: {
+					200: 1,
+					800: 2,
+					1300: 3
+				},
+				duration: 500,
+
+				loop: true
+			});
 			// setting dynamic href
 			$('div[href^="#"]').on('click', function (e) {
 				e.preventDefault();
@@ -60,55 +75,64 @@
 		<div class="menu-header__logo">
 			<img class="menu-header__img" src='images/logo_small.png'>
 		</div>
-		<div onclick="document.getElementsByClassName('contact').scrollIntoView();" class="menu-header__item">kontakt</div>
-		<div onclick="document.getElementsByClassName('partners').scrollIntoView();" class="menu-header__item">współpraca</div>
+		<div onclick="document.getElementsByClassName('contact').scrollIntoView();" class="menu-header__item">kontakt
+		</div>
+		<div onclick="document.getElementsByClassName('partners').scrollIntoView();" class="menu-header__item">
+			współpraca</div>
 	</div>
 	<header class="main view">
-			<img class="view__img" src="images/photo.jpg">
-			<div class="view__text">
-				<div class="view__text view__text--name">Aneta SŁOTWIŃSKA</div>
-				<div class="view_text view__text--work">fizjoterapia i masaż</div>
-				<div class="view__text view__text--about">
-					Pracuję od xx lat, jestem polacana, mam grupę na tym i tym, polecma seibie, Mikołaj Sobiegraj
-				</div>
+		<img class="view__img" src="images/photo.jpg">
+		<div class="view__text">
+			<div class="view__text view__text--name">Aneta SŁOTWIŃSKA</div>
+			<div class="view_text view__text--work">fizjoterapia i masaż</div>
+			<div class="view__text view__text--about">
+				Pracuję od xx lat, jestem polacana, mam grupę na tym i tym, polecma seibie, Mikołaj Sobiegraj
 			</div>
+		</div>
 	</header>
 
 	<section class="main offer">
 		<div class="main__title">Oferta</div>
 		<div class="offer__box">
-			<img class="offer__img" src="images/magnetoterapia.jpg">
-			<div class="offer__title">Magnetoterapia</div>
-		</div>
-		<div class="offer__box">
-			<img class="offer__img" src="images/drenazlimfatyczny.jpg">
-			<div class="offer__title">Drenaż limfatyczny</div>
-		</div>
-		<div class="offer__box">
-			<img class="offer__img" src="images/krioterapia.jpg">
-			<div class="offer__title">Krioterapia</div>
-		</div>
-		<div class="offer__box">
-				<img class="offer__img" src="images/elektroterapia.jpg">
+			<img class="offer__img" src="images/elektroterapia.jpg">
 			<div class="offer__title">Elektroterapia</div>
 		</div>
 		<div class="offer__box">
-			<img class="offer__img" src="images/laseroterapia.jpg">
-			<div class="offer__title">Laseroterapia</div>
+			<img class="offer__img" src="images/magnetoterapia.jpg">
+			<div class="offer__title">Magnetoterapia</div>
 		</div>
 		<div class="offer__box">
 			<img class="offer__img" src="images/sonoterapia.jpg">
 			<div class="offer__title">Sonoterapia</div>
 		</div>
+		<div class="offer__box">
+			<img class="offer__img" src="images/drenazlimfatyczny.jpg">
+			<div class="offer__title">Drenaż limfatyczny</div>
+		</div>
+
+		<div class="offer__box">
+			<img class="offer__img" src="images/krioterapia.jpg">
+			<div class="offer__title">Krioterapia</div>
+		</div>
+
+		<div class="offer__box">
+			<img class="offer__img" src="images/laseroterapia.jpg">
+			<div class="offer__title">Laseroterapia</div>
+		</div>
+
 	</section>
 	<section class="main photos">
 		<div class="main__title">
 			Zdjęcia
 		</div>
-		<div class="images_slider">
-			<div class="images_slider_box">
-			</div>
+		<div class="photos__slider">
+			<div><img class="photos__img" src="images/laseroterapia.jpg"></div>
+			<div><img class="photos__img" src="images/laseroterapia.jpg"></div>
+			<div><img class="photos__img" src="images/laseroterapia.jpg"></div>
+			<div><img class="photos__img" src="images/laseroterapia.jpg"></div>
+			<div><img class="photos__img" src="images/laseroterapia.jpg"></div>
 		</div>
+
 
 	</section>
 
@@ -177,7 +201,6 @@
 		<div id="copys">
 			Wszelkie prawa zastrzeżone &copy;<br>Aneta Słotwińska <?php echo date(Y);?>
 		</div>
-
 	</footer>
 </body>
 
