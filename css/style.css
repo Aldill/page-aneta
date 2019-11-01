@@ -103,7 +103,6 @@ body {
   text-align: center;
   font-size: 18px;
 }
-
 .main__title {
   letter-spacing: 3px;
   font-size: 2.2em;
@@ -117,13 +116,13 @@ body {
 
 .photos__slider {
 	margin-top: 50px;
-	
-	height: 400px;
+	height: 500px;
+	width:100%;
+	display:block;
   }
   .photos__img {
-	  height:100%;
+	  height: 500px;;
 	  width:100%;
-	  
   }
   
 
@@ -183,7 +182,6 @@ body {
   text-transform: lowercase;
   background-color: #ffe0e0;
 }
-
 .offer__img {
   height: inherit;
   width: inherit;
@@ -195,6 +193,12 @@ body {
   bottom: 0;
   border-radius: 50%;
   margin: auto;
+}
+
+.offer__price {
+	display:flex;
+	justify-content: center;
+	align-items: center;
 }
 /* contact view */
 
