@@ -64,7 +64,7 @@ body {
   padding-top: 80px;
   margin-top: -80px;
   display: flex;
-  background: linear-gradient(#ffe0e0 0%, white 50%);
+  background: linear-gradient(#eaa59d 0%, white 50%);
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -92,7 +92,7 @@ body {
   font-weight: normal;
 }
 .view__img {
-  height: 350px;
+  height: 25vw;
   border-radius: 50%;
   border: 10px solid white;
   margin: -50px 0px 20px 0px;
@@ -227,7 +227,7 @@ footer {
   width: 100%;
   position: relative;
   min-height: 400px;
-  background: linear-gradient(white 0%, #ffe0e0 50%);
+  background: linear-gradient(white, #eaa59d);
   text-align: center;
   letter-spacing: 2px;
 }
