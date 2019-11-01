@@ -11,7 +11,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/js.js"></script>
 	<script>
-
 		$(document).ready(function () {
 			// setting dynamic href
 			$('div[href^="#"]').on('click', function (e) {
@@ -61,8 +60,8 @@
 		<div class="menu-header__logo">
 			<img class="menu-header__img" src='images/logo_small.png'>
 		</div>
-		<div class="menu-header__item">kontakt</div>
-		<div class="menu-header__item">współpraca</div>
+		<div onclick="document.getElementsByClassName('contact').scrollIntoView();" class="menu-header__item">kontakt</div>
+		<div onclick="document.getElementsByClassName('partners').scrollIntoView();" class="menu-header__item">współpraca</div>
 	</div>
 	<header class="main view">
 			<img class="view__img" src="images/photo.jpg">
@@ -80,32 +79,26 @@
 		<div class="offer__box">
 			<img class="offer__img" src="images/magnetoterapia.jpg">
 			<div class="offer__title">Magnetoterapia</div>
-			<div class="offer__text"></div>
 		</div>
 		<div class="offer__box">
-			<div class="offer__title">Drenaż limfatyczny</div>
-			<div class="offer__text"></div>
 			<img class="offer__img" src="images/drenazlimfatyczny.jpg">
+			<div class="offer__title">Drenaż limfatyczny</div>
 		</div>
 		<div class="offer__box">
 			<img class="offer__img" src="images/krioterapia.jpg">
 			<div class="offer__title">Krioterapia</div>
-			<div class="offer__text"></div>
 		</div>
 		<div class="offer__box">
+				<img class="offer__img" src="images/elektroterapia.jpg">
 			<div class="offer__title">Elektroterapia</div>
-			<div class="offer__text"></div>
-			<img class="offer__img" src="images/elektroterapia.jpg">
 		</div>
 		<div class="offer__box">
 			<img class="offer__img" src="images/laseroterapia.jpg">
 			<div class="offer__title">Laseroterapia</div>
-			<div class="offer__text"></div>
 		</div>
 		<div class="offer__box">
-			<div class="offer__title">Sonoterapia</div>
-			<div class="offer__text"></div>
 			<img class="offer__img" src="images/sonoterapia.jpg">
+			<div class="offer__title">Sonoterapia</div>
 		</div>
 	</section>
 	<section class="main photos">
