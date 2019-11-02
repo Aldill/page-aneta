@@ -354,6 +354,13 @@ h3 {
 	  .menu-header:hover > .menu-header__item {
 		display:block;
 	  }
+	  .offer__box {
+		  transform: scale(0.8);
+	  }
+	  .offer__box:hover {
+		z-index: 2;
+		transform: scale(0.9);
+	  }
 
 	  .facebook, .google {
 		  width:100%;
