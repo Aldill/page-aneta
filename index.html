@@ -15,7 +15,6 @@
 
 
 		$(document).ready(function () {
-
 			new Siema({
 				selector: '.photos__slider',
 				perPage: {
@@ -69,115 +68,120 @@
 </head>
 
 <body>
-	<div class="menu-header">
-		<div class="menu-header__item">oferta</div>
-		<div class="menu-header__item">zdjęcia</div>
-		<div class="menu-header__logo">
-			<img class="menu-header__img" src='images/logo_small.png'>
-		</div>
-		<div onclick="document.getElementsByClassName('contact').scrollIntoView();" class="menu-header__item">kontakt
-		</div>
-		<div onclick="document.getElementsByClassName('partners').scrollIntoView();" class="menu-header__item">
-			współpraca</div>
-	</div>
 	<header class="main view">
-		<img class="view__img" src="images/photo.jpg">
-		<div class="view__text">
-			<div class="view__text view__text--name">Aneta SŁOTWIŃSKA</div>
-			<div class="view_text view__text--work">fizjoterapia i masaż</div>
-			<div class="view__text view__text--about">
-				Pracuję od xx lat, jestem polacana, mam grupę na tym i tym, polecma seibie, Mikołaj Sobiegraj
+		<div class="menu-header">
+			<div class="menu-header__item">oferta</div>
+			<div class="menu-header__item">zdjęcia</div>
+			<div class="menu-header__logo">
+				<img class="menu-header__img" src='images/logo_small.png'>
 			</div>
+			<div onclick="document.getElementsByClassName('contact').scrollIntoView();" class="menu-header__item">
+				kontakt
+			</div>
+			<div onclick="document.getElementsByClassName('partners').scrollIntoView();" class="menu-header__item">
+				współpraca</div>
 		</div>
+		<div class="view__box">
+				<img class="view__img" src="images/photo.jpg">
+				<div class="view__text">
+					<div class="view__text view__text--name">Aneta SŁOTWIŃSKA</div>
+					<div class="view_text view__text--work">fizjoterapia i masaż</div>
+					<div class="view__text view__text--about">
+						Kilka lat doświadczenia, jednak wciąż się kształcę. Mam za sobą wiele różnych kursów i jestem głodna
+						wiedy.
+					</div>
+				</div>
+		</div>
+		
 	</header>
+	<main>
+		<section class="main offer">
+			<div class="main__title">Oferta</div>
+			<div class="offer__box">
+				<img class="offer__img" src="images/elektroterapia.jpg">
+				<div class="offer__title">Elektroterapia</div>
+			</div>
+			<div class="offer__box">
+				<img class="offer__img" src="images/magnetoterapia.jpg">
+				<div class="offer__title">Magnetoterapia</div>
+			</div>
+			<div class="offer__box">
+				<img class="offer__img" src="images/sonoterapia.jpg">
+				<div class="offer__title">Sonoterapia</div>
+			</div>
+			<div class="offer__box">
+				<img class="offer__img" src="images/drenazlimfatyczny.jpg">
+				<div class="offer__title">Drenaż limfatyczny</div>
+			</div>
 
-	<section class="main offer">
-		<div class="main__title">Oferta</div>
-		<div class="offer__box">
-			<img class="offer__img" src="images/elektroterapia.jpg">
-			<div class="offer__title">Elektroterapia</div>
-		</div>
-		<div class="offer__box">
-			<img class="offer__img" src="images/magnetoterapia.jpg">
-			<div class="offer__title">Magnetoterapia</div>
-		</div>
-		<div class="offer__box">
-			<img class="offer__img" src="images/sonoterapia.jpg">
-			<div class="offer__title">Sonoterapia</div>
-		</div>
-		<div class="offer__box">
-			<img class="offer__img" src="images/drenazlimfatyczny.jpg">
-			<div class="offer__title">Drenaż limfatyczny</div>
-		</div>
+			<div class="offer__box">
+				<img class="offer__img" src="images/krioterapia.jpg">
+				<div class="offer__title">Krioterapia</div>
+			</div>
 
-		<div class="offer__box">
-			<img class="offer__img" src="images/krioterapia.jpg">
-			<div class="offer__title">Krioterapia</div>
-		</div>
-
-		<div class="offer__box">
-			<img class="offer__img" src="images/laseroterapia.jpg">
-			<div class="offer__title">Laseroterapia</div>
-		</div>
-	</section>
-	<section class="main photos">
-		<div class="main__title">
-			Zdjęcia
-		</div>
-		<div class="photos__slider">
-			<div><img class="photos__img" src="images/1.jpg"></div>
-			<div><img class="photos__img" src="images/2.jpg"></div>
-			<div><img class="photos__img" src="images/3.jpg"></div>
-			<div><img class="photos__img" src="images/4.jpg"></div>
-			<div><img class="photos__img" src="images/5.jpg"></div>
-			<div><img class="photos__img" src="images/6.jpg"></div>
-		</div>
+			<div class="offer__box">
+				<img class="offer__img" src="images/laseroterapia.jpg">
+				<div class="offer__title">Laseroterapia</div>
+			</div>
+		</section>
+		<section class="main photos">
+			<div class="main__title">
+				Zdjęcia
+			</div>
+			<div class="photos__slider">
+				<div><img class="photos__img" src="images/1.jpg"></div>
+				<div><img class="photos__img" src="images/2.jpg"></div>
+				<div><img class="photos__img" src="images/3.jpg"></div>
+				<div><img class="photos__img" src="images/4.jpg"></div>
+				<div><img class="photos__img" src="images/5.jpg"></div>
+				<div><img class="photos__img" src="images/6.jpg"></div>
+			</div>
 
 
-	</section>
+		</section>
 
-	<section class="main contact">
-		<div class="main__title">
-			Kontakt
-		</div>
-		<div id="contact_box">
-			<iframe
-				src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FAneta-S%25C5%2582otwi%25C5%2584ska-Fizjoterapia-i-Masa%25C5%25BC-148720952428075%2Fabout%2F%3Fref%3Dpage_internal&tabs=timeline&width=500&height=450&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
-				width="500" height="450" style="overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"
-				allow="encrypted-media"></iframe>
-		</div>
-		<div class="contact_separator"></div>
-		<div id="contact_box">
-			Zadzwoń<br>
+		<section class="main contact">
+			<div class="main__title">
+				Kontakt
+			</div>
+			<div class="contact_box">
+				<iframe class="facebook"
+					src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FAneta-S%25C5%2582otwi%25C5%2584ska-Fizjoterapia-i-Masa%25C5%25BC-148720952428075%2Fabout%2F%3Fref%3Dpage_internal&tabs=timeline&width=500&height=450&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+					height="450" style="overflow:hidden" scrolling="no" frameborder="0"
+					allowTransparency="true" allow="encrypted-media"></iframe>
+
+		<div class="contact__text">Zadzwoń<br>
 			+48 725 656 143<br><br>
 			Otwarte od poniedziałku do piątku<br>
-			8:00 - 18:00<br>
+			8:00 - 18:00<br></div>
+				
 
+			
+				<iframe class="google"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4094064433857!2d23.419202015911424!3d50.45210049512658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4724af14150c7541%3A0x75e8df85b293f5ca!2sKo%C5%9Bcielna+16%2C+22-600+Tomasz%C3%B3w+Lubelski!5e0!3m2!1spl!2spl!4v1548482874933"
+					 height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</section>
+		<section class="main partners">
+			<div class="main__title">
+				Współpraca
+			</div>
+			<div class="text">Strona jak i cały salon powstał w współpracy z wieloma firmami oraz coś tam unia
+				europejska
+				czy coś. Albo to leci do głównego diva i jest na starcie strony.</div>
+			<div class="logo_containter">
+				<div class="logo_image"><img src="images/Logo_UE.jpg"></div>
+				<div class="logo_image"><img src="images/Logo_Leader.png"></div>
+				<div class="logo_image"><img src="images/logo_roztocze.jpg"></div>
+				<div class="logo_image"><img src="images/Logo_PROW.jpg"></div>
+			</div>
+		</section>
 		</div>
-		<div class="contact_separator"></div>
-		<div id="contact_box">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4094064433857!2d23.419202015911424!3d50.45210049512658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4724af14150c7541%3A0x75e8df85b293f5ca!2sKo%C5%9Bcielna+16%2C+22-600+Tomasz%C3%B3w+Lubelski!5e0!3m2!1spl!2spl!4v1548482874933"
-				width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
-	</section>
-	<section class="main partners">
-		<div class="main__title">
-			Współpraca
-		</div>
-		<div class="text">Strona jak i cały salon powstał w współpracy z wieloma firmami oraz coś tam unia europejska
-			czy coś. Albo to leci do głównego diva i jest na starcie strony.</div>
-		<div id="logo_containter">
-			<div id="logo_image"><img src="images/Logo_UE.jpg"></div>
-			<div id="logo_image"><img src="images/Logo_Leader.png"></div>
-			<div id="logo_image"><img src="images/logo_roztocze.jpg"></div>
-			<div id="logo_image"><img src="images/Logo_PROW.jpg"></div>
-		</div>
-	</section>
-	</div>
+	</main>
+
 	<footer>
 		<div class="divide_footer">
-			<h1>"Dobre nawyki jak i złe nawyki są jak psy. Wygrywa ten, którego częściej karmisz."</h1>
+			<h1>" Dobre nawyki jak i złe nawyki są jak psy. Wygrywa ten, którego częściej karmisz. "</h1>
 			<h3>znalazłem w internecie</h3>
 		</div>
 		<div class="divide_footer">
@@ -198,7 +202,7 @@
 
 
 		</div>
-		<div id="copys">
+		<div class="copys">
 			Wszelkie prawa zastrzeżone &copy;<br>Aneta Słotwińska <?php echo date(Y);?>
 		</div>
 	</footer>
