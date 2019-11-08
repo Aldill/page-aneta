@@ -33,7 +33,7 @@ body {
   top: 0;
   font-size: 16px;
   z-index: 3;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, top 0.5s ease-in-out;
 }
 .menu-header:hover {
 	box-shadow: 0 5px 9px -3px #d6d6d6;
@@ -110,6 +110,7 @@ body {
 .main {
   text-align: center;
   font-size: 18px;
+  padding:10px 0px;
 }
 .main__title {
   letter-spacing: 3px;
@@ -118,6 +119,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main__text {
+
 }
 
 /* photos view */
@@ -132,7 +137,7 @@ body {
 	  height: 500px;;
 	  width:100%;
   }
-  
+
 
 @keyframes photos-slideshow {
   0% {
@@ -212,71 +217,58 @@ body {
 	align-items: center;
 }
 /* contact view */
-.contact {}
-
-.contact_box {
+.contact {
   display: flex;
   justify-content:center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   position: relative;
-  font-size: 28px;
 }
 
-.google, .facebook{
-	width:500px;
-}
-.contact__text {
-	width:400px;
-	margin:0px 50px;
+.google{
+	width:100%;
 }
 
 
 
 /* footer */
 
-footer {
+.foot {
   width: 100%;
   position: relative;
-  min-height: 400px;
   background: linear-gradient(white, #eaa59d);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.foot__box {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+.foot__text {
   text-align: center;
-  letter-spacing: 2px;
-}
-
-h1 {
-  font-size: 23px;
-}
-h3 {
-  font-size: 10px;
+  font-size: 0.8em;
   font-weight: normal;
 }
-.copys {
-  font-size: 10px;
-  position: relative;
-  text-align: center;
-  margin: 15px auto;
+.foot__text--strong {
+  font-size: 1.8em;
 }
 
-.copys::before {
-  content: "";
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  position: absolute;
-  top: -10px;
-  width: 250px;
-  height: 2px;
-  background-color: white;
+.foot__text--href {
+  cursor: pointer;
 }
-.divide_footer {
-  min-width: 300px;
+.foot__text--copy{
+  letter-spacing: 2px;
+  margin-bottom:5px;
+}
+
+
+.foot__divide {
   max-width: 500px;
-  margin: 50px 10px 10px 10px;
-  display: inline-block;
-  position: relative;
-  vertical-align: top;
+  margin: 50px 50px 10px 50px;
 }
 
 /* partners */
@@ -372,5 +364,8 @@ h3 {
 
 	  .contact_box {
 		flex-direction: column;
-	  }
+    }
+    .foot__box {
+      flex-direction: column;
+    }
 }

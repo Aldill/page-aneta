@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 	<meta charset="utf-8">
@@ -8,13 +8,8 @@
 		description="Fizjoterapia Tomaszów Lubelski, profesjonalna i miła obsługa. Gwarantowana skuteczność zabiegów, polecany salon w całym mieście i nie tylko.">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/js.js"></script>
-	<script src="js/siema.min.js"></script>
 	<script>
-
-
-		$(document).ready(function () {
+		document.addEventListener("DOMContentLoaded", function (event) {
 			new Siema({
 				selector: '.photos__slider',
 				perPage: {
@@ -23,79 +18,46 @@
 					1300: 3
 				},
 				duration: 500,
-
 				loop: true
 			});
-			// setting dynamic href
-			$('div[href^="#"]').on('click', function (e) {
-				e.preventDefault();
-				var position = $('.' + ($(this).attr("name"))).offset().top;
-				$('html, body').animate({ scrollTop: (position - 65) + 'px' }, 200);
-			});
-			var menu_top_position = $("#menu").offset().top; // getting top position before function
-			$(window).on('resize', function () {
-				menu_top_position = $("#menu").offset().top; // when resize, update distance
-			})
-			$(window).scroll(function (event) {
-				if (($(window).scrollTop() >= menu_top_position)) {
-					$("#menu").addClass('fixed');
-					//$("#logo").css("margin-bottom", "80px");
-					$("#logo_small").show();
-					$("#call_me").show();
-				} else {
-					$("#menu").removeClass("fixed");
-					//$("#logo").css("margin-bottom", "0px");
-					$("#logo_small").hide();
-					$("#call_me").hide();
-				}
-			});
-			// showing menu
-			$(".show_menu").on('click', function () {
-				$(".undermenu").slideToggle();
-			})
-			//dynamic content offer
-			$("#image_containter").on("click", function () {
-				$("#box_for_offer").load('offers/' + $(this).attr("name") + '.html').slideDown("slow");
-			})
-			$("#box_for_offer .close").on("click", function () {
-				$("#box_for_offer").html('');
-				$("#box_for_offer").slideUp("slow");
-
-			})
-
 		});
+
 	</script>
 </head>
 
 <body>
 	<header class="main view">
 		<div class="menu-header">
-			<div class="menu-header__item">oferta</div>
-			<div class="menu-header__item">zdjęcia</div>
+			<div onclick="document.getElementsByClassName('offer')[0].scrollIntoView({behavior:'smooth'});"
+				class="menu-header__item">oferta</div>
+			<div onclick="document.getElementsByClassName('photos')[0].scrollIntoView({behavior:'smooth'});"
+				class="menu-header__item">zdjęcia</div>
 			<div class="menu-header__logo">
 				<img class="menu-header__img" src='images/logo_small.png'>
 			</div>
-			<div onclick="document.getElementsByClassName('contact').scrollIntoView();" class="menu-header__item">
+			<div onclick="document.getElementsByClassName('contact')[0].scrollIntoView({behavior:'smooth'});"
+				class="menu-header__item">
 				kontakt
 			</div>
-			<div onclick="document.getElementsByClassName('partners').scrollIntoView();" class="menu-header__item">
+			<div onclick="document.getElementsByClassName('partners')[0].scrollIntoView({behavior:'smooth'});"
+				class="menu-header__item">
 				współpraca</div>
 		</div>
 		<div class="view__box">
-				<img class="view__img" src="images/photo.jpg">
-				<div class="view__text">
-					<div class="view__text view__text--name">Aneta SŁOTWIŃSKA</div>
-					<div class="view_text view__text--work">fizjoterapia i masaż</div>
-					<div class="view__text view__text--about">
-						Kilka lat doświadczenia, jednak wciąż się kształcę. Mam za sobą wiele różnych kursów.
-					</div>
+			<img class="view__img" src="images/photo.jpg">
+			<div class="view__text">
+				<div class="view__text view__text--name">Johny Potter</div>
+				<div class="view_text view__text--work">massage</div>
+				<div class="view__text view__text--about">
+					Few years of experience, still learing as a student. My goal is to be the best in my work.
 				</div>
+			</div>
 		</div>
-		
+
 	</header>
 	<main>
 		<section class="main offer">
-			<div class="main__title">Oferta</div>
+			<div class="main__title">Offer</div>
 			<div class="offer__box">
 				<img class="offer__img" src="images/elektroterapia.jpg">
 				<div class="offer__title">Elektroterapia</div>
@@ -125,7 +87,7 @@
 		</section>
 		<section class="main photos">
 			<div class="main__title">
-				Zdjęcia
+				Photos
 			</div>
 			<div class="photos__slider">
 				<div><img class="photos__img" src="images/1.jpg"></div>
@@ -141,33 +103,21 @@
 
 		<section class="main contact">
 			<div class="main__title">
-				Kontakt
+				Contact
 			</div>
-			<div class="contact_box">
-				<iframe class="facebook"
-					src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FAneta-S%25C5%2582otwi%25C5%2584ska-Fizjoterapia-i-Masa%25C5%25BC-148720952428075%2Fabout%2F%3Fref%3Dpage_internal&tabs=timeline&width=500&height=450&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
-					height="450" style="overflow:hidden" scrolling="no" frameborder="0"
-					allowTransparency="true" allow="encrypted-media"></iframe>
 
-		<div class="contact__text">Zadzwoń<br>
-			+48 725 656 143<br><br>
-			Otwarte od poniedziałku do piątku<br>
-			8:00 - 18:00<br></div>
-				
+<div class="main__text">MON-FRI (8AM - 6PM)<br> {number}</div>
 
-			
 				<iframe class="google"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4094064433857!2d23.419202015911424!3d50.45210049512658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4724af14150c7541%3A0x75e8df85b293f5ca!2sKo%C5%9Bcielna+16%2C+22-600+Tomasz%C3%B3w+Lubelski!5e0!3m2!1spl!2spl!4v1548482874933"
-					 height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
+					height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 		</section>
 		<section class="main partners">
 			<div class="main__title">
-				Współpraca
+				Cooperation
 			</div>
-			<div class="text">Strona jak i cały salon powstał w współpracy z wieloma firmami oraz coś tam unia
-				europejska
-				czy coś. Albo to leci do głównego diva i jest na starcie strony.</div>
+			<div class="main__text">This page is created with help from this companies, et cetera.</div>
 			<div class="logo_containter">
 				<div class="logo_image"><img src="images/Logo_UE.jpg"></div>
 				<div class="logo_image"><img src="images/Logo_Leader.png"></div>
@@ -178,33 +128,32 @@
 		</div>
 	</main>
 
-	<footer>
-		<div class="divide_footer">
-			<h1>" Dobre nawyki jak i złe nawyki są jak psy. Wygrywa ten, którego częściej karmisz. "</h1>
-			<h3>znalazłem w internecie</h3>
+	<footer class="foot">
+		<div class="foot__box">
+			<div class="foot__divide">
+				<h1 class="foot__text foot__text--strong">" Good habits and bad habits are like dogs. Who wins is associated with feeding."</h1>
+				<h3 class="foot__text">just found on the web</h3>
+			</div>
+			<div class="foot__divide">
+				<h1 class="foot__text foot__text--strong" >Contact</h1>
+				<h3 class="foot__text">4. Privet Drive</h3>
+				<h3 class="foot__text"> Little Whinging SURREY</h3>
+				<h3 class="foot__text"> johnsmith@mail.com</h3>
+			</div>
+			<div class="foot__divide">
+				<h1 class="foot__text foot__text--strong"> Page </h1>
+				<h3 onclick="document.getElementsByClassName('offer')[0].scrollIntoView({behavior:'smooth'});" class="foot__text foot__text--href">offer</h3>
+				<h3 onclick="document.getElementsByClassName('photos')[0].scrollIntoView({behavior:'smooth'});" class="foot__text foot__text--href">photos</h3>
+				<h3 onclick="document.getElementsByClassName('contact')[0].scrollIntoView({behavior:'smooth'});" class="foot__text foot__text--href">contact</h3>
+				<h3 onclick="document.getElementsByClassName('partners')[0].scrollIntoView({behavior:'smooth'});" class="foot__text foot__text--href">partners</h3>
+			</div>
 		</div>
-		<div class="divide_footer">
-			<h1>Kontakt</h1>
-			<h3>Tomaszów Lubelski 22-600</h3>
-			<h3> ul.Kościelna 16</h3>
-			<h3> anetasłotwińska@asdasd.pl
-		</div>
-		<div class="divide_footer">
-			<h1> Strona </h1>
-			<h3> odnośnik</h3>
-			<h3> odnośnik</h3>
-			<h3> odnośnik</h3>
-			<h3> odnośnik</h3>
-			<h3> odnośnik</h3>
-			<h3> odnośnik</h3>
-			<h3> odnośnik</h3>
-
-
-		</div>
-		<div class="copys">
-			Wszelkie prawa zastrzeżone &copy;<br>Aneta Słotwińska <?php echo date(Y);?>
+		<div class="foot__text foot__text--copy">
+			All rights reserved &copy; 2019 Mikołaj Sobiegraj
 		</div>
 	</footer>
+	<script src="js/js.js"></script>
+	<script src="js/siema.min.js"></script>
 </body>
 
 </html>
