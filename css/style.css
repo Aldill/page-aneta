@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 /*
 #fff5f5 - base pink
@@ -15,14 +15,15 @@ html {
 }
 body {
   background: white;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-family: 'Raleway';
   margin: 0;
 }
 
 /* main menu design */
-.menu-header {
+.menu {
   width: 100%;
   height: 80px;
   background-color: white;
@@ -31,155 +32,132 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
-  font-size: 16px;
-  z-index: 3;
-  transition: box-shadow 0.2s ease-in-out, top 0.5s ease-in-out;
+  z-index: 2;
+  transform: translateY(0px);
+  transition: transform 0.2s 0.3s ease-in-out;
 }
-.menu-header:hover {
-	box-shadow: 0 5px 9px -3px #d6d6d6;
+.menu--hide {
+  transform: translateY(-80px);
 }
-.menu-header__logo {
+.menu__logo {
   height: 70px;
   margin: 0px 20px;
 }
-.menu-header__img {
+.menu__img {
   height: 100%;
 }
-.menu-header__item {
-  transition: background-color 0.5s;
-  padding: 0px 50px;
-  margin: 0px 30px;
-  text-align: center;
+.menu__item {
+  width: 150px;
+  margin: 0px 20px;
   text-transform: uppercase;
   border-radius: 5px;
   cursor: pointer;
-  width: 200px;
+  border: none;
+  background-color: white;
+  font-family: inherit;
   font-weight: bold;
-  font-size: 0.8em;
   letter-spacing: 2px;
   height: 40px;
   line-height: 40px;
+  transition: background-color 0.5s;
 }
-.menu-header__item:hover {
+.menu__item:hover {
   background-color: #ffe0e0;
-}
-
-/* main-view design */
-.view {
-  height: 100vh;
-  padding-top:80px;
-  background: linear-gradient(#eaa59d, white);
-}
-.view__box {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.view__aboutme {
-  font-size: 16px;
-  margin: 5px 0px;
-}
-.view__text {
-  font-size: 16px;
-}
-.view__text--name {
-  font-size: 3.2em;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.view__text--about {
-  font-size: 1.2em;
-  font-weight: normal;
-}
-.view__text--work {
-  font-size: 2em;
-  font-weight: normal;
-}
-.view__img {
-  height: 300px;
-  border-radius: 50%;
-  border: 10px solid white;
-  margin: -50px 0px 20px 0px;
 }
 
 /* whole section design */
 .main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  font-size: 18px;
-  padding:10px 0px;
+  padding: 10px 0px;
+  margin: 10px 0px;
 }
 .main__title {
   letter-spacing: 3px;
   font-size: 2.2em;
-  margin: 10px auto 20px auto;
+  margin: 10px;
+}
+
+/* main-view design */
+.main--start {
+  height: 100vh;
+  padding-top: 80px;
+  background: linear-gradient(#eaa59d, white);
+}
+.main__box {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
-.main__text {
-
+.main__title {
+  font-size: 2.5em;
+}
+.main__box h5,
+.main__box h4,
+.main__box h3 {
+  margin: 2px 0px;
+  font-weight: medium;
+}
+.main__img {
+  height: 40vh;
+  width: 40vh;
+  border-radius: 50%;
+  border: 10px solid white;
+  margin-bottom: 20px;
 }
 
 /* photos view */
 
 .photos__slider {
-	margin-top: 50px;
-	height: 500px;
-	width:100%;
-	display:block;
-  }
-  .photos__img {
-	  height: 500px;;
-	  width:100%;
-  }
-
-
-@keyframes photos-slideshow {
-  0% {
-    background: url("../images/magnetoterapia.jpg") no-repeat;
-  }
-  25% {
-    background: url("../images/drenazlimfatyczny.jpg") no-repeat;
-  }
-  50% {
-    background: url("../images/krioterapia.jpg") no-repeat;
-  }
-  75% {
-    background: url("../images/laseroterapia.jpg") no-repeat;
-  }
-  100% {
-    background: url("../images/elektroterapia.jpg") no-repeat;
-  }
+  margin-top: 50px;
+  height: 500px;
+  width: 100%;
+  display: block;
+}
+.photos__img {
+  height: 500px;
+  width: 100%;
 }
 
 /* offer view */
 
-.offer {
-  text-align: center;
-  padding-bottom: 35px; /*cause of offer__box */
-}
 .offer__box {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  height: 300px;
-  width: 400px;
-  background-color:#ffe0e0 ;
-  margin: 15px;
-  transition: all 1s ease-in-out;
+  max-width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.offer__box:nth-child(odd) {
-  z-index: 1;
+.offer__item {
+  position: relative;
+  text-align: center;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  background-color: #ffe0e0;
+  margin: -50px;
+  border: 5px solid #ffe0e0;
+  transition: transform 1s ease-in-out;
 }
-.offer__box:hover {
-  z-index: 2;
+
+.offer__item:nth-child(odd) {
+  margin-top: 25px;
+}
+.offer__item:hover {
   transform: scale(1.1);
+  z-index: 2;
+}
+
+.offer__item:hover .offer__img {
+  opacity: 1;
 }
 
 .offer__title {
@@ -196,94 +174,48 @@ body {
   background-color: #ffe0e0;
 }
 .offer__img {
-  height: inherit;
-  width: inherit;
-  opacity:0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  border-radius: 50%;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
-  transition: 1s opacity ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.offer__box:hover > .offer__img {
-	opacity:1;
-}
-.offer__price {
-	display:flex;
-	justify-content: center;
-	align-items: center;
-}
 /* contact view */
-.contact {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  position: relative;
-}
-
-.google{
-	width:100%;
-}
-
-
-
-/* footer */
-
-.foot {
-  width: 100%;
-  position: relative;
-  background: linear-gradient(white, #eaa59d);
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.foot__box {
+.contact__box {
   display: flex;
   justify-content: center;
-  align-items: top;
+  align-items: center;
+  width: 100%;
 }
-.foot__text {
-  text-align: center;
-  font-size: 0.8em;
+.google,
+.facebook {
+  width: 400px;
+  height: 300px;
+  margin: 0px 30px;
+}
+
+.contact__box h1 {
   font-weight: normal;
-}
-.foot__text--strong {
-  font-size: 1.8em;
-}
-
-.foot__text--href {
-  cursor: pointer;
-}
-.foot__text--copy{
-  letter-spacing: 2px;
-  margin-bottom:5px;
-}
-
-
-.foot__divide {
-  max-width: 500px;
-  margin: 50px 50px 10px 50px;
 }
 
 /* partners */
 .logo_containter {
   width: 100%;
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logo_image {
   width: 150px;
-  vertical-align: middle;
-  display: inline-block;
   margin: 0px 20px;
   padding: 20px 0px;
-  transition: width 0.5s;
 }
 
 .logo_containter img {
@@ -291,81 +223,105 @@ body {
   height: 100%;
 }
 
+/* footer */
 
+.foot {
+  width: 100%;
+  background: linear-gradient(white, #eaa59d);
+  display: flex;
+  min-height: 500px;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+}
+.foot__box {
+  display: flex;
+  justify-content: center;
+}
+.foot__text {
+  font-size: 0.8em;
+  font-weight: normal;
+  margin: 2px 0px;
+}
+.foot__text--strong {
+  font-size: 1.8em;
+}
+
+.foot__text--href {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+}
+.foot__text--copy {
+  letter-spacing: 2px;
+  margin: 10px 0px;
+}
+
+.foot__divide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 500px;
+  margin: 0px 50px;
+}
 
 /* phones */
 
 @media only screen and (max-width: 480px) {
-	.menu-header {
-		width: 100vw;
-		height: auto;
-		padding-top:75px;
-		background-color: white;
-		position: fixed;
-		display: flex;
-		justify-content: center;
-  	align-items: center;
-  	flex-direction: column;
-		top: 0;
-		font-size: 16px;
-		z-index: 3;
-		transition: box-shadow 0.2s ease-in-out;
-	  }
-	  .menu-header:hover {
-		  box-shadow: 0 5px 9px -3px #d6d6d6;
-	  }
-	  .menu-header__logo {
-		  position: absolute;
-		  top:0;
-		  left:0;
-		  right:0;
-		  margin: auto;
-	  }
-	  .offer__box{
-		margin:0px -35px -35px -35px;
-	  }
-	  .menu-header__item {
-		transition: background-color 0.5s;
-		padding: 0px 0px;
-		margin:0;
-		display:none;
-		text-transform: uppercase;
-		border-radius: 0px;
-		cursor: pointer;
-		width: 100%;
-		background-color: white;
-		font-weight: bold;
-		font-size: 0.8em;
-		letter-spacing: 2px;
-		height: 60px;
-		line-height: 60px;
-	  }
-	  .menu-header__item:hover {
-		background-color: #ffe0e0;
-	  }
-	  .menu-header:hover > .menu-header__item {
-		display:block;
-	  }
-	  .offer__box {
-		  transform: scale(0.8);
-	  }
-	  .offer__box:hover {
-		z-index: 2;
-		transform: scale(0.9);
-	  }
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    z-index: 3;
+    transform: translateY(-100vh) translateY(90px);
+    transition: transform 0.2s ease-in-out;
+  }
+  .menu__logo {
+    position: absolute;
+    bottom: 0;
+    margin: 0px 0px 10px 0px;
+  }
+  .menu--show {
+    transform: translateY(0px);
+  }
+  .menu__item {
+    transition: background-color 0.5s;
+    border-radius: 0px;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .offer__item:nth-child(odd) {
+    margin-top: 0px;
+  }
 
-	  .facebook, .google {
-		  width:100%;
-	  }
-	  .contact__text {
-		  width:100%;
-		  margin: 50px 0px;
-	  }
+  .facebook,
+  .google {
+    width: 100%;
+  }
+  .contact__text {
+    width: 100%;
+    margin: 50px 0px;
+  }
 
-	  .contact_box {
-		flex-direction: column;
-    }
-    .foot__box {
-      flex-direction: column;
-    }
+  .contact__box {
+    flex-direction: column;
+  }
+  .foot__box {
+    flex-direction: column;
+  }
 }
